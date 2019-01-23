@@ -25,44 +25,44 @@
         <div class='row align-items-center'>
             <div class='col'>
                 <section class='text-center align-middle'>
-                    <div class='container'>
+                    <div class='container  mt-5'>
                         <h1>Turn-based Social RPG</h1>
                         <p class='lead text-muted'>
                             Welcome! Come, and take some time to play this little game of mine...
                         </p>
                     </div>
-                    <div class="card">
-                            <div class="card-header">
-                                Add Book
-                            </div>
-    
-                            <div class="card-body">
-                                <form action="" method="POST" role="form">
-                                    <div class="form-group">
-                                        <label for="">Name</label>
-                                        <input type="text" class="form-control" id="charname" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Reputation</label>
-                                        <input type="number" class="form-control" id="reputation" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Knowledge</label>
-                                        <input type="number" class="form-control" id="knowledge" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Sanity</label>
-                                        <input type="number" class="form-control" id="sanity" placeholder="">
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="text-right">
-                                    <a href="/game" type="submit" class="btn btn-primary btn-md" id="add-btn">
-                                        <span class="fa fa-book"></span>Start Game</a>
-                                </div>
-                            </div>
-    
+                    <div class="card mx-5">
+                        <div class="card-header">
+                            Set up your character here...
                         </div>
+
+                        <div class="card-body">
+                            <form action="" method="POST" role="form">
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control" id="charname" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Reputation (1-10)</label>
+                                    <input type="number" class="form-control" id="reputation" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Knowledge (1-10)</label>
+                                    <input type="number" class="form-control" id="knowledge" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Sanity (1-10)</label>
+                                    <input type="number" class="form-control" id="sanity" placeholder="">
+                                </div>
+                            </form>
+                            <br>
+                            <p>
+                                <a href="/game" type="submit" class="btn btn-primary btn-lg btn-block" id="add-btn">Start
+                                    Game</a>
+                            </p>
+                        </div>
+
+                    </div>
                 </section>
             </div>
         </div>
