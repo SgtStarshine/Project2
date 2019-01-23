@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "mvc_design",
   "version": "1.0.0",
   "description": "",
@@ -16,5 +17,30 @@
   "devDependencies": {
     "handlebars-helper-css": "^0.1.0",
     "mocha": "^5.2.0"
+=======
+  "name": "Proejct2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runiondd/burger.git"
+  },
+  "author": "drunion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runiondd/burger/issues"
+  },
+  "homepage": "https://github.com/runiondd/burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+>>>>>>> cc46e2bf56064dd724b65597ffb03247b10179ba
   }
 }
