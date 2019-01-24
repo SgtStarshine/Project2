@@ -1,20 +1,23 @@
 {
-  "name": "mvc_design",
+  "name": "friend_finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Friend Compaitibility Finder",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredlintz5/friend_finder.git"
+  },
+  "author": "Fred Lintz",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.10.2"
+  "bugs": {
+    "url": "https://github.com/fredlintz5/friend_finder/issues"
   },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0",
-    "mocha": "^5.2.0"
+  "homepage": "https://github.com/fredlintz5/friend_finder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }

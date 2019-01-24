@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Turn-based Social RPG</title>
+
+    <!-- Personal CSS link-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <main role='main'>
+        <div class='row align-items-center'>
+            <div class='col'>
+                <section class='text-center align-middle'>
+                    <div class='container'>
+                        <h1><strong>Turn-based Social RPG</strong></h1>
+                        <p class= 'lead-text'>
+                            <strong>Welcome! Come, and take some time to play this little game of mine...</strong>
+                        </p>
+                    </div>
+                    <div class="card">
+                            <div class="card-header">
+                                Add Book
+                            </div>
+    
+                            <div class="card-body">
+                                <form action="" method="POST" role="form">
+                                    <div class="form-group">
+                                        <label for="">Name</label>
+                                        <input type="text" class="form-control" id="charname" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Reputation</label>
+                                        <input type="number" class="form-control" id="reputation" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Knowledge</label>
+                                        <input type="number" class="form-control" id="knowledge" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Sanity</label>
+                                        <input type="number" class="form-control" id="sanity" placeholder="">
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="text-right">
+                                    <a href="/game" type="submit" class="btn btn-success btn-md" id="add-btn">
+                                        <span class="fa fa-book"></span> Start</a>
+                                </div>
+                            </div>
+    
+						</div>
+						<div>
+							<a href="/api/events">API Events List</a>
+							<span>|</span>
+							<a href="#" target="_blank">Github Repo</a>
+						</div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
