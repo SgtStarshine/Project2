@@ -1,15 +1,22 @@
-const bodyParser = require('body-parser');
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
+var express = require("express");
+var app = express();
+var PORT = process.env.PORT || 8080;
 
+var db = require("./models");
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+app.use(express.static("public"));
 
-require("./app/routing/htmlRoutes")(app);
-require("./app/routing/apiRoutes")(app);
+// Routes
+// =============================================================
+require("./routes/api-routes.js")(app);
 
-
-app.listen(port, () => console.log(`Listening on port ${port}`));
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
