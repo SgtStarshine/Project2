@@ -12,7 +12,7 @@
   <!-- Bootstrap CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -23,16 +23,33 @@
 
   <div class="container">
     <div class="row">
-      <div class="col s4 bg-primary"></div>
-      <div class="col s8 bg-secondary"></div>
+      <div class="col-4 bg-">
+
+      </div>
+      <div class="col-8">
+
+      </div>
     </div>
-
-
-
+    <div class="row">
+      <div class="col-4 align-items-end">
+        <h4>Beat your friends, learn as much random stuff as you can, impress that girl from Tuesday Night Trivia!</h3>
+      </div>
+      <div class="col-8 align-items-end">
+        <div class="questBox">
+          <h5 id="category"></h5>
+          <h3 id="question"></h3>
+          <h4 id="answer"></h4>
+          <a class="btn btn-primary text-light btn-lg btn-block" id="submitButton">(+1 Rep, -1 San)</a>
+          <a class="btn btn-primary text-light btn-lg btn-block" id="submitButton">(+1 Kno, -1 Rep)</a>
+          <a class="btn btn-primary text-light btn-lg btn-block" id="submitButton">(+1 San, -1 Kno)</a>
+          <a class="btn btn-danger text-light btn-lg btn-block" id="newQuestion">Next Turn</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Custom Script -->
-  <script src="js/game.js" type="text/javascript"></script>
+  <!--<script src="js/game.js" type="text/javascript"></script>-->
 </body>
 
 </html>
