@@ -41,10 +41,6 @@ body {
     background-color: rgb(68, 64, 64) !important;
 }
 
-.btn {
-    border-radius: 50% !important;
-}
-
 .cardForm {
     margin: 25px 50px 75px 100px;
     opacity: 0.8;
@@ -60,4 +56,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+}
+
+.stepRow {
+    background-color: white;
+    margin: 25px 50px 75px 100px;
+    padding: 10px;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+    width: 1000px;
+ 
 }

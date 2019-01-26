@@ -15,23 +15,27 @@
 </head>
 
 <body>
-  <div class="container chosen-select" id="step1">
-    <div class="row">
+  <div class="container chosen-select" id="step1" style="visibility: visible;">
+    <div class="row stepRow">
       <div class="col-8">
         You have worked for a tech firm for the last five years. 
         The Company recently hired two efficiency consultants to downsize the company.
         You feel the heat as they cut the fat from your Department.
       </div>
       <div class="col-4">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do you embezzle money for a golden parachute?</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Keep you head down and Redouble your efforts?</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do Nothing</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
+          <input id="Step1-Option1" type="radio" aria-label="Radio button for following text input">
+          Do you embezzle money for a golden parachute?<br/>
+          <input  id="Step1-Option2" type="radio" aria-label="Radio button for following text input">
+          Keep you head down and Redouble your efforts?<br/>
+          <input  id="Step1-Option3" type="radio" aria-label="Radio button for following text input">
+          Do Nothing<br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step2">
-    <div class="row">
+
+  <div class="container chosen-select" id="step2" style="visibility: hidden;">
+    <div class="row stepRow">
       <div class="col-8">
         You made it through the first round of cuts.
         However, the consultants gear up for a second pass.
@@ -40,31 +44,36 @@
         You worked hard to distance yourself this person. Alas here it is again.       
       </div>
       <div class="col-4">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Pretend your a fan and name the one song you know.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Reveal your contempt for the singer and people who make the comparison.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do Nothing</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
+          <input id="Step2-Option1" type="radio" aria-label="Radio button for following text input">
+          Pretend your a fan and name the one song you know.<br/>
+          <input  id="Step2-Option2" type="radio" aria-label="Radio button for following text input">
+          Reveal your contempt for the singer and people who make the comparison.<br/>
+          <input  id="Step2-Option3" type="radio" aria-label="Radio button for following text input">
+          Do Nothing<br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step3">
-    <div class="row">
+  <div class="container chosen-select" id="step3" style="visibility: hidden;">
+    <div class="row stepRow">
       <div class="col-8">
         Your deparment lead is moving your coworker into the basement.
         He kindly ask your coworker to gather up his/her things.
         Your coworker gently reminds him he still has their stapler.        
       </div>
       <div class="col-4">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Stand up for your coworker and
-          Offer your Stapler.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Let sleeping dogs lie.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do Nothing</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
+          <input id="Step3-Option1" type="radio" aria-label="Radio button for following text input">
+          Stand up for your coworker and offer your Stapler.<br/>
+          <input  id="Step3-Option2" type="radio" aria-label="Radio button for following text input">
+          Let sleeping dogs lie<br/>
+          <input  id="Step3-Option3" type="radio" aria-label="Radio button for following text input">
+          Do Nothing<br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step4">
-    <div class="row">
+  <div class="container chosen-select" id="step4" style="visibility: hidden;">
+    <div class="row stepRow">
       <div class="col-8">
         Debbie in accounting is having a birthday. 
         There is cake but not enough for everyone. 
@@ -72,39 +81,49 @@
         You hesitate and are called out for being greedy.        
       </div>
       <div class="col-4">
-        <button type="button" class="btn btn-prmary btn-lg btn-block">Pass the piece down knowing there not going to be one for you.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Cough on the cake, and claim victory.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do Nothing</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
+          <input id="Step4-Option1" type="radio" aria-label="Radio button for following text input">
+          Pass the piece down knowing there not going to be one for you.<br/>
+          <input  id="Step4-Option2" type="radio" aria-label="Radio button for following text input">
+          Cough on the cake, and claim victory.<br/>
+          <input  id="Step4-Option3" type="radio" aria-label="Radio button for following text input">
+          Do Nothing<br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
       </div>
     </div>
   </div>  
-  <div class="container chosen-select" id="step5">
-    <div class="row">
+  <div class="container chosen-select" id="step5" style="visibility: hidden;">
+    <div class="row stepRow">
       <div class="col-8">
         The Copier that has given you grief forthe past 5 years has gone kaputt.
       </div>
       <div class="col-4">
-        <button type="button" class="btn btn-prmary btn-lg btn-block">Viking Funeral</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Rage against the machine</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do nothing</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
+          <input id="Step5-Option1" type="radio" aria-label="Radio button for following text input">
+          Viking Funeral<br/>
+          <input  id="Step5-Option2" type="radio" aria-label="Radio button for following text input">
+          Rage against the machine<br/>
+          <input  id="Step5-Option3" type="radio" aria-label="Radio button for following text input">
+          PC Load Letter?! Wwhat the *$%& does that mean?!  Do Nothing<br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
       </div>
     </div>
   </div>  
-  <div class="container chosen-select" id="step6">
-    <div class="row">
+  <div class="container chosen-select" id="step6" style="visibility: hidden;">
+    <div class="row stepRow">
       <div class="col-8">
                      
         Your Department Lead would like you to print and place this quarters TPS reports.
         You know that he can do this task himself. but, he throughly enjoys making you do his work.
       </div>
       <div class="col-4">
-        <button type="button" class="btn btn-prmary btn-lg btn-block">Do you send an ALL-CAPS ANGRY EMAIL.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Copitulate and print out the reports.</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Do Nothing</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
+          <input id="Step6-Option1" type="radio" aria-label="Radio button for following text input">
+          Do you send an ALL-CAPS ANGRY EMAIL.<br/>
+          <input  id="Step6-Option2" type="radio" aria-label="Radio button for following text input">
+          Copitulate and print out the reports.<br/>
+          <input  id="Step6-Option3" type="radio" aria-label="Radio button for following text input">
+          Do Nothing<br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Next Turn</button>
       </div>
+
     </div>
   </div>  
   <!-- Custom Script -->
@@ -185,5 +204,20 @@
     });
   </script>
 </body>
-
+<script type="text/javascript">
+  var _userway_config = {
+  /* uncomment the following line to override default position*/
+   position: '3', 
+  /* uncomment the following line to override default size (values: small, large)*/
+   size: 'large', 
+  /* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
+   language: null, 
+  /* uncomment the following line to override color set via widget (e.g., #053f67)*/
+  color: 'null', 
+  /* uncomment the following line to override type set via widget(1=person, 2=chair, 3=eye)*/
+   type: '3',
+  account: 'kvRlcGK4ep'
+  };
+  </script>
+  <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
 </html>
