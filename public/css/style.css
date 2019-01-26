@@ -32,12 +32,6 @@ body {
     background-repeat: repeat-x;
 }
 
-.card {
-    margin: 25px 50px 75px 100px;
-    opacity: 0.8;
-  filter: alpha(opacity=50);
-}
-
 .card-header {
     color: white;
     text-shadow: white;
@@ -49,4 +43,21 @@ body {
 
 .btn {
     border-radius: 50% !important;
+}
+
+.cardForm {
+    margin: 25px 50px 75px 100px;
+    opacity: 0.8;
+  filter: alpha(opacity=50);
+  width: 500px;
+  background-color: white;
+  display: inline-block;
+}
+
+.form-control {
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
