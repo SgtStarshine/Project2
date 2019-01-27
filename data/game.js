@@ -8,18 +8,21 @@ var sanity = 0;
 $(document).ready(function () {
 
 	// Intialize the game with hidden Divs
-	$("#mid_game_container").hide();
-	$("#end_container").hide();
-	$("#start_button").on("click", function () {
+	$("#step1").show();
+	$("#step2").hide();
+	$("#step3").hide();
+	$("#step4").hide();
+	$("#step5").hide();
+	$("#step6").hide();
+	
+	$("#next1").on("click", function () {
 
-		// Hide the start Div from the user
-		$("#start_container").hide();
-
-
-		// Show the Game Div
-		$("#mid_game_container").show();
-
-		startCountdown();
+		$("#step1").hide();
+		$("#step2").show();
+		$("#step3").hide();
+		$("#step4").hide();
+		$("#step5").hide();
+		$("#step6").hide();
 		return;
 
 	});	

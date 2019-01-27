@@ -13,7 +13,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/main.html"));
   });
 
-  // game route loads the game.html page, where game books in the db are displayed
+  // game route loads the game.html page, where game ruckus in the db are displayed
   app.get("/game", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/game.html"));
   });
