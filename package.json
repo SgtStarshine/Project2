@@ -1,5 +1,5 @@
 {
-  "name": "Proejct2",
+  "name": "ruckus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,18 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/runiondd/burger.git"
+    "url": "git+https://github.com/SgtStarshine/Project2.git"
   },
   "author": "drunion",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/runiondd/burger/issues"
+    "url": "https://github.com/SgtStarshine/Project2/issues"
   },
-  "homepage": "https://github.com/runiondd/burger#readme",
+  "homepage": "https://github.com/SgtStarshine/Project2#readme",
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
+    "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.4",
     "sequelize": "^4.42.0"

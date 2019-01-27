@@ -39,6 +39,135 @@ $(document).ready(function () {
 
 		}
 		
+		// Display increment/decrement results
+		$('#reputation').html(reputation);
+		$('#knowledge').html(knowledge);
+		$('#sanity').html(sanity);
+		return;
+
+	});	
+
+	$("#next2").on("click", function () {
+
+		$("#step2").hide();
+		$("#step3").show();
+		
+		var Q2 = $('input:radio[name="Step2"]:checked').val();
+		
+		switch (Q2) {
+			case "option1":
+				reputation--;
+				break;
+			case "option2":
+				reputation++;
+				knowledge++;
+				break;
+			case "option3":
+				reputation--;
+				sanity++;
+				break;
+			default:
+				alert("Please select an answer before continuing.")
+
+		}
+		
+		// Display increment/decrement results
+		$('#reputation').html(reputation);
+		$('#knowledge').html(knowledge);
+		$('#sanity').html(sanity);
+		return;
+
+	});	
+
+	$("#next3").on("click", function () {
+
+		$("#step3").hide();
+		$("#step4").show();
+		
+		var Q3 = $('input:radio[name="Step3"]:checked').val();
+		
+		switch (Q3) {
+			case "option1":
+				reputation--;
+				break;
+			case "option2":
+				reputation++;
+				knowledge++;
+				break;
+			case "option3":
+				reputation--;
+				sanity++;
+				break;
+			default:
+				alert("Please select an answer before continuing.")
+
+		}
+		
+		// Display increment/decrement results
+		$('#reputation').html(reputation);
+		$('#knowledge').html(knowledge);
+		$('#sanity').html(sanity);
+		return;
+
+	});	
+
+	$("#next4").on("click", function () {
+
+		$("#step4").hide();
+		$("#step5").show();
+		
+		var Q4 = $('input:radio[name="Step4"]:checked').val();
+		
+		switch (Q4) {
+			case "option1":
+				reputation--;
+				break;
+			case "option2":
+				reputation++;
+				knowledge++;
+				break;
+			case "option3":
+				reputation--;
+				sanity++;
+				break;
+			default:
+				alert("Please select an answer before continuing.")
+
+		}
+		
+		// Display increment/decrement results
+		$('#reputation').html(reputation);
+		$('#knowledge').html(knowledge);
+		$('#sanity').html(sanity);
+		return;
+
+	});	
+
+	$("#next5").on("click", function () {
+
+		$("#step5").hide();
+		$("#step6").show();
+		
+		var Q5 = $('input:radio[name="Step5"]:checked').val();
+		
+		switch (Q5) {
+			case "option1":
+				reputation--;
+				break;
+			case "option2":
+				reputation++;
+				knowledge++;
+				break;
+			case "option3":
+				reputation--;
+				sanity++;
+				break;
+			default:
+				alert("Please select an answer before continuing.")
+
+		}
+		
+		// Display increment/decrement results
 		$('#reputation').html(reputation);
 		$('#knowledge').html(knowledge);
 		$('#sanity').html(sanity);
@@ -47,10 +176,36 @@ $(document).ready(function () {
 	});	
 
 	$("#next6").on("click", function () {
-		$("#step6").hide();
-		endGame();
-	});
 
+		$("#step6").hide();
+		
+		var Q6 = $('input:radio[name="Step6"]:checked').val();
+		
+		switch (Q6) {
+			case "option1":
+				reputation--;
+				break;
+			case "option2":
+				reputation++;
+				knowledge++;
+				break;
+			case "option3":
+				reputation--;
+				sanity++;
+				break;
+			default:
+				alert("Please select an answer before continuing.")
+
+		}
+		
+		// Display increment/decrement results
+		$('#reputation').html(reputation);
+		$('#knowledge').html(knowledge);
+		$('#sanity').html(sanity);
+		endGame();
+		return;
+
+	});	
 
 	// Function to be run after the timer is up
 	function endGame() {
