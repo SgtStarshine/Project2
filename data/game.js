@@ -19,26 +19,9 @@ $(document).ready(function () {
 
 		$("#step1").hide();
 		$("#step2").show();
-		$("#step3").hide();
-		$("#step4").hide();
-		$("#step5").hide();
-		$("#step6").hide();
-		return;
-
-	});	
-
-
-	// Function to be run after the timer is up
-	function checkAnswers() {
-
-		// Checked values of Radio Buttons
+		
 		var Q1 = $('input:radio[name="Step1"]:checked').val();
-		var Q2 = $('input:radio[name="Step2"]:checked').val();
-		var Q3 = $('input:radio[name="Step3"]:checked').val();
-		var Q4 = $('input:radio[name="Step4"]:checked').val();
-		var Q5 = $('input:radio[name="Step5"]:checked').val();
-		var Q6 = $('input:radio[name="Step6"]:checked').val();
-
+		
 		switch (Q1) {
 			case "option1":
 				reputation--;
@@ -54,17 +37,24 @@ $(document).ready(function () {
 			default:
 				alert("Please select an answer before continuing.")
 
-
 		}
 		
-		
-
-		// After answers are validated, display the score results
 		$('#reputation').html(reputation);
 		$('#knowledge').html(knowledge);
 		$('#sanity').html(sanity);
+		return;
+
+	});	
+
+	$("#next6").on("click", function () {
+		$("#step6").hide();
+		endGame();
+	});
 
 
+	// Function to be run after the timer is up
+	function endGame() {
+		
 		// Show the completed Score Div
 		$("#end_container").show();
 
