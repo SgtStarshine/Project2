@@ -14,6 +14,10 @@ var Character = sequelize.define("Character", {
     validate: {
       len: [1, 30]
     }
+  }, 
+  reputation: {
+    type: Sequelize.INTEGER,
+    defaultValue: false
   },
   knowledge: {
     type: Sequelize.INTEGER,
@@ -22,11 +26,7 @@ var Character = sequelize.define("Character", {
   sanity: {
     type: Sequelize.INTEGER,
     defaultValue: false
-  },
-  reputation: {
-    type: Sequelize.INTEGER,
-    defaultValue: false
-  }
+  } 
 }, {
   // disable the modification of tablenames
   freezeTableName: true

@@ -38,9 +38,9 @@ module.exports = function(app) {
     Character.create({
       routeName: routeName,
       name: character.name,
-      role: character.role,
-      age: character.age,
-      forcePoints: character.forcePoints
+      reputation: character.reputation,
+      knowledge: character.knowledge,      
+      sanity: character.sanity
     });
 
     res.status(204).end();
