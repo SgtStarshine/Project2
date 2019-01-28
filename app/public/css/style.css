@@ -1,6 +1,8 @@
 html, body, main, .row {
     height: 100%;
     width: 100%;
+    text-shadow: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .card-body {
@@ -14,13 +16,12 @@ label {
 }
 
 .container {
-    text-shadow: black;
-    font-family: 'Courier New', Courier, monospace;
+    
     padding: 20px;
 }
 
-h1 {
-    font-size: 60px !important;
+h2 {
+    font-size: 42px !important;
 }
 
 p {
@@ -66,4 +67,9 @@ body {
     filter: alpha(opacity=50);
     width: 1000px;
  
+}
+
+.stepImage {
+    opacity: 2.0;
+    height: 320px;
 }

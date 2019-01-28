@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS ruckus;
-CREATE DATABASE ruckus;
-USE ruckus;
