@@ -4,8 +4,8 @@
 
 // Dependencies
 // =============================================================
-var Character = require("../../models/character.js");
 // var db = require("../models");
+var db = require("../../models");
 
 // Routes
 // =============================================================
@@ -13,48 +13,45 @@ module.exports = function(app) {
 
   app.get("/api/character", function(req, res) {
     console.log("Get character Attributes");
-  db.Character.findAll({}).then(function(dbCharacter) {
+  db.Characters.findAll({}).then(function(dbCharacter) {
     res.json(dbCharacter);
   });
 });
 
+
   // POST route for saving a new character
   app.post("/api/created", function(req, res) {
-    db.Character.create({
+    db.Characters.create({
       name: req.body.name,
-      reputation: req.body.complete,
-      knowledge: req.body.knowledge,
+      power: req.body.reputation,
+      knowlege: req.body.knowlege,
       sanity: req.body.sanity
     }).then(function(dbCharacter) {
       res.json(dbCharacter);
     })
       .catch(function(err) {
+        console.log("DB Error on Insert");
         res.json(err);
       });
   });
 
-  // // If a user sends data to add a new character...
-  // app.post("/api/created", function(req, res) {
-  //   // Take the request...
-  //   var character = req.body;
-  //   console.log("name=" + character.name);
-  //   console.log("name=" + character.reputation);
-  //   console.log("name=" + character.knowledge);
-  //   console.log("name=" + character.sanity);
 
-  //   // Create a routeName
-
-    // Using a RegEx Pattern to remove spaces from character.name
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-
-    // Then add the character to the database using sequelize
-    // Character.create({
-    //   name: character.name,
-    //   reputation: character.reputation,
-    //   knowledge: character.knowledge,      
-    //   sanity: character.sanity
-    // });
-
-  //   res.status(204).end();
-  // });
+  // PUT route for updating burgers. We can get the updated burger data from req.body
+  app.put("/api/update", function(req, res) {
+    console.log("Update Character");
+    db.Characters.update({
+      reputation: req.body.complete,
+      knowledge: req.body.knowledge,
+      sanity: req.body.sanity
+    }, {
+      where: {
+        name: req.name
+      }
+    }).then(function(dbBurger) {
+      res.json(dbBurger);
+    })
+      .catch(function(err) {
+        res.json(err);
+      });
+  });
 };
