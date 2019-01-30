@@ -21,9 +21,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       defaultValue: false
     } 
-  }, {
-    // disable the modification of tablenames
-    freezeTableName: true
   });
 return Characters;
 }

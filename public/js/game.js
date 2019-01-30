@@ -1,17 +1,27 @@
 // ------------------------ Game Functions are below ------------------------
 $(document).ready(function () {
-	$.get("/api/created" , function (data) {
-		// append the character name
-		$("#well-section").append("<h3>" + data.name + "</h3>");
-		// append data.reputation
-		$("#well-section").append("<h3>Reputation: " + data.reputation + "</h3>");
-		// append data.knowledge
-		$("#well-section").append("<h3>Knowledge: " + data.knowledge + "</h3>");
-		// append data.sanity
-		$("#well-section").append("<h3>Sanity: " + data.sanity + "</h3>");
-	});
+	var url = window.location.search;
 
-	// Intialize the game with hidden Divs
+	if (url.indexOf("?name=") !== -1) {
+		nameParam = url.split("=")[1];
+	}
+
+
+		$.get("/api/character/" + nameParam, function (data) {
+			console.log(data);
+
+			console.log("nameParam=" + nameParam);
+			// append the character name
+			$("#well-section").append("<h3>" + data.name + "</h3>");
+			// append data.reputation
+			$("#well-section").append("<h3>Reputation: " + data.reputation + "</h3>");
+			// append data.knowledge
+			$("#well-section").append("<h3>Knowledge: " + data.knowledge + "</h3>");
+			// append data.sanit
+			$("#well-section").append("<h3>Sanity: " + data.sanity + "</h3>");
+		});
+
+		// Intialize the game with hidden Divs
 	$("#step1").show();
 	$("#step2").hide();
 	$("#step3").hide();
