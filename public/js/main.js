@@ -13,9 +13,8 @@ $("#add-btn").on("click", function(event) {
     // send an AJAX POST-request with jQuery
     $.post("/api/created", newCharacter)
       .then(function(data) {
-        console.log(data);
-        alert("Creating character...");
-      });  
-    
+        console.log("make request to game.html");
+        $(location).attr('href',"/game");
+      });   
   });
   
