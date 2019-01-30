@@ -8,17 +8,17 @@ $(document).ready(function () {
 
 
 		$.get("/api/character/" + nameParam, function (data) {
-			console.log(data);
+			console.log("data[0].name=" + data[0].name);
 
 			console.log("nameParam=" + nameParam);
 			// append the character name
-			$("#well-section").append("<h3>" + data.name + "</h3>");
+			$("#well-section").append("<h3>Name: " + data[0].name + "</h3>");
 			// append data.reputation
-			$("#well-section").append("<h3>Reputation: " + data.reputation + "</h3>");
+			$("#well-section").append("<h3>Reputation: " + data[0].power + "</h3>");
 			// append data.knowledge
-			$("#well-section").append("<h3>Knowledge: " + data.knowledge + "</h3>");
+			$("#well-section").append("<h3>Knowledge: " + data[0].knowlege + "</h3>");
 			// append data.sanit
-			$("#well-section").append("<h3>Sanity: " + data.sanity + "</h3>");
+			$("#well-section").append("<h3>Sanity: " + data[0].sanity + "</h3>");
 		});
 
 		// Intialize the game with hidden Divs
