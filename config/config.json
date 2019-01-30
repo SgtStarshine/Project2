@@ -1,4 +1,11 @@
 {
+  "development": {
+    "username": "root",
+    "password": "Mauser1157!",
+    "database": "ruckus",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
   "test": {
     "username": "root",
     "password": null,

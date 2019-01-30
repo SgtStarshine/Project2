@@ -11,10 +11,12 @@ $("#add-btn").on("click", function(event) {
       knowledge: $("#knowledge").val().trim(),
       // points from sanity input
       sanity: $("#sanity").val().trim()
-    };
-  
+      
+    };    
+
     // send an AJAX POST-request with jQuery
     $.post("/api/created", newCharacter)
+
       // on success, run this callback
       .then(function(data) {
         // log the data we found
