@@ -8,23 +8,10 @@ var Character = require("../models/character.js");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
-  // Search for Specific Character (or all characters) then provides JSON
-  app.get("/api/:characters?", async function(req, res) {
-    if (req.params.characters) {
-      // Display the JSON for ONLY that character.
-      // (Note how we're using the ORM here to run our searches)
-      let result = await Character.findOne({
-        where: {routeName: req.params.characters}});
-        return res.json(result);
-    } else {
-      let result = await Character.findAll();
-      return res.json(result);
-      };
-    });
+module.exports = function(app) {  
 
   // If a user sends data to add a new character...
-  app.post("/api/new", function(req, res) {
+  app.post("/api/created", function(req, res) {
     // Take the request...
     var character = req.body;
 
