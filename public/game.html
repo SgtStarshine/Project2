@@ -13,18 +13,23 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
-  <script src="js/game.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <div class="container chosen-select" id="step1">
+  
     <div class="row stepRow">
-      <div class="col-6" id="well-section">
+      <div class="col-6" id="characterAttributesSection">
+          <h3>Name:<span id="characterName"></span></h3>
+          <h3>Power:<span id="characterPower"></span></h3>
+          <h3>Knowledge:<span id="characterKnowledge"></span></h3>
+          <h3>Sanity:<span id="characterSanity"></span></h3>
       </div>
       <div class="col-6"><img class="stepImage" src="images/golden-parachute.gif" alt="Golden Parachute"></div>
     </div>
-    <div class="row stepRow">
+
+ <div class="container chosen-select" id="question1">
+    <div class="row stepRow" > 
       <div class="col-8">
         You have worked for a tech firm for the last five years.
         The Company recently hired two efficiency consultants to downsize the company.
@@ -42,12 +47,8 @@
     </div>
   </div>
 
-  <div class="container chosen-select" id="step2">
-    <div class="row stepRow">
-      <div class="col-6" id="well-section">
-      </div>
-      <div class="col-6"><img class="stepImage" src="images/nick_the_lounge_singer.jpg" alt="Lounge Singer"></div>
-    </div>
+  <div class="container chosen-select" id="question2" style="display: none;">
+    
     <div class="row stepRow">
       <div class="col-8">
         You made it through the first round of cuts.
@@ -67,12 +68,8 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step3">
-    <div class="row stepRow">
-      <div class="col-6" id="well-section">
-      </div>
-      <div class="col-6"><img class="stepImage" src="images/McGill_Stapler.jpg" alt="Stapler"></div>
-    </div>
+  <div class="container chosen-select" id="question3" style="display: none;">
+   
     <div class="row stepRow">
       <div class="col-8">
         Your deparment lead is moving your coworker into the basement.
@@ -90,12 +87,8 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step4">
-    <div class="row stepRow">
-      <div class="col-6" id="well-section">
-      </div>
-      <div class="col-6"><img class="stepImage" src="images/tuxedo_cake.jpg" alt="Tuxedo Cake"></div>
-    </div>
+  <div class="container chosen-select" id="question4" style="display: none;">
+    
     <div class="row stepRow">
       <div class="col-8">
         Janice from accounting is having a birthday.
@@ -114,12 +107,7 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step5">
-    <div class="row stepRow">
-      <div class="col-6" id="well-section">
-      </div>
-      <div class="col-6"><img class="stepImage" src="images/copier.png" alt="Copier"></div>
-    </div>
+  <div class="container chosen-select" id="question5" style="display: none;">
     <div class="row stepRow">
       <div class="col-8">
         The Copier that has given you grief for the past 5 years has gone kaputt.
@@ -135,12 +123,7 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step6">
-    <div class="row stepRow">
-      <div class="col-6" id="well-section">
-      </div>
-      <div class="col-6"><img class="stepImage" src="images/dont-make-me-go-all-caps-on-you.jpg" alt="ALL CAPS"></div>
-    </div>
+  <div class="container chosen-select" id="question6" style="display: none;">
     <div class="row stepRow">
       <div class="col-8">
         Your Department Lead would like you to print and place this quarters TPS reports.
@@ -158,8 +141,7 @@
     </div>
   </div>
 
-  <div id="ending1">
-    <!-- Static Game Logo -->
+  <div id="ending1" style="display: none;">
     <h1 id="done">Reputation!</h1>
     <br>
     <p>News of your departure from the tech firm spreads quickly.
@@ -170,8 +152,7 @@
       Looks like your reputation carried you through.</p>
   </div>
 
-  <div id="ending2">
-    <!-- Static Game Logo -->
+  <div id="ending2" style="display: none;">
     <h1 id="done">Criminal!</h1>
     <br>
     <p>You find yourself in Cabo, living it up.
@@ -179,8 +160,7 @@
       You racked up enough money with it to just live of the interest for a while.</p>
   </div>
 
-  <div id="ending3">
-    <!-- Static Game Logo -->
+  <div id="ending3" style="display: none;">
     <h1 id="done">Sanity!</h1>
     <br>
     <p>You may not have gotten accolades or a significant severance,
@@ -191,8 +171,7 @@
     </p>
   </div>
 
-  <div id="ending4">
-    <!-- Static Game Logo -->
+  <div id="ending4" style="display: none;">
     <h1 id="done">
       Knowledge!</h1>
     <br>
@@ -202,6 +181,9 @@
       Some people resent you for this, and maybe your reputation suffered a little bit.
       But a least you don't have to find new work against the crowd of from you tech firm.</p>>
   </div>
+  
+  <script src="js/game.js"></script>
+
 </body>
 <script type="text/javascript">
   var _userway_config = {
@@ -217,6 +199,7 @@
     type: '3',
     account: 'kvRlcGK4ep'
   };
+
 </script>
 <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
 
