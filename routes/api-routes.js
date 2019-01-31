@@ -41,16 +41,15 @@ app.get("/api/character/:name", function(req, res) {
       });
   });
 
-
   // PUT route for updating characters. We can get the updated character data from req.body
-  app.put("/api/update", function(req, res) {
+  app.put("/api/updateCharacter", function(req, res) {
     db.Characters.update({
-      reputation: req.body.complete,
-      knowledge: req.body.knowledge,
+      power: req.body.power,
+      knowlege: req.body.knowlege,
       sanity: req.body.sanity
     }, {
       where: {
-        name: req.name
+        name: req.body.name
       }
     }).then(function(dbCharacter) {
       res.json(dbCharacter);
@@ -59,4 +58,5 @@ app.get("/api/character/:name", function(req, res) {
         res.json(err);
       });
   });
+  
 };
