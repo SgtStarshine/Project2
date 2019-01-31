@@ -45,8 +45,6 @@ $(document).ready(function () {
 	//show/hide the correct questions 
 		switch(gameQuestion) {
 			case "question1":
-				alert("question 1 clicked");
-
 				currentCharacter.knowlege++;
 				currentCharacter.sanity--;
 				currentCharacter.power++;
@@ -99,30 +97,12 @@ $(document).ready(function () {
 				$("#question6").show();
 				break;
 			default:
-			//this should log an error **TODO**
-			alert("Please select an answer before continuing.");
+				//this should log an error **TODO**
+				alert("Please select an answer before continuing.");
+				break;
 		}
 
-	function updateCharacter(name, knowlege, sanity, power) {
 
-		var updatedCharacter = {
-			name: name,
-			power: power,
-			knowlege: knowlege,
-			sanity: sanity
-		};   
-
-		updateCharacter.name = name;
-		updateCharacter.power = power;
-		updateCharacter.knowlege = knowlege;
-		updateCharacter.sanity = sanity;
-
-		$.ajax({
-			method: "PUT",
-			url: "/api/updateCharacter",
-			data: updatedCharacter
-		}).then(updatePlayerAttributesView());
-	}
 			// switch (Q1) {
 			// 	case "option1":
 			// 		console.log("Q1-O1 selected");
@@ -151,11 +131,32 @@ $(document).ready(function () {
 		return;
 	}
 
+	function updateCharacter(name, knowlege, sanity, power) {
+		alert("updateCharacter");
+		var updatedCharacter = {
+			name: name,
+			power: power,
+			knowlege: knowlege,
+			sanity: sanity
+		};   
+
+		updateCharacter.name = name;
+		updateCharacter.power = power;
+		updateCharacter.knowlege = knowlege;
+		updateCharacter.sanity = sanity;
+
+		$.ajax({
+			method: "PUT",
+			url: "/api/updateCharacter",
+			data: updatedCharacter
+		}).then(updatePlayerAttributesView());
+	}
+
 	function updatePlayerAttributesView() {
 		alert("updatePlayerAttributesView");
 
 		$.get("/api/character/" + nameParam, function (data) {
-			alert("data[0].name=" + data[0].name);
+			$("#characterName").text("").val;
 			$("#characterName").text(data[0].name);
 			$("#characterPower").text(data[0].power);
 			$("#characterKnowledge").text(data[0].knowlege);
@@ -166,7 +167,6 @@ $(document).ready(function () {
 			currentCharacter.knowlege = data[0].knowlege;
 			currentCharacter.sanity = data[0].sanity;
 		})
-		return;
 	}
 
 	// 	switch (Q2) {
