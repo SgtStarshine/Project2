@@ -49,6 +49,7 @@ $(document).ready(function () {
 				currentCharacter.sanity--;
 				currentCharacter.power++;
 				updateCharacter(currentCharacter.name, currentCharacter.knowlege, currentCharacter.sanity, currentCharacter.power)
+				$(".stepImage").attr("src", "images/nick_the_lounge_singer.jpg");
 				$("#question1").hide();
 				$("#question2").show();
 				$("#question3").hide();
@@ -57,6 +58,9 @@ $(document).ready(function () {
 				$("#question6").hide();
 				break;
 			case "question2":
+				//adjust currentCharacter's attributes for choices
+				//call updateCharacter() 
+				$(".stepImage").attr("src", "images/McGill_Stapler.jpg");
 				$("#question1").hide();
 				$("#question2").hide();
 				$("#question3").show();
@@ -65,6 +69,7 @@ $(document).ready(function () {
 				$("#question6").hide();
 				break;
 			case "question3":
+				$(".stepImage").attr("src", "images/tuxedo_cake.jpg");
 				$("#question1").hide();
 				$("#question2").hide();
 				$("#question3").hide();
@@ -73,6 +78,7 @@ $(document).ready(function () {
 				$("#question6").hide();
 				break;
 			case "question4":
+				$(".stepImage").attr("src", "images/copier.png");
 				$("#question1").hide();
 				$("#question2").hide();
 				$("#question3").hide();
@@ -81,6 +87,7 @@ $(document).ready(function () {
 				$("#question6").hide();
 				break;
 			case "question5":
+				$(".stepImage").attr("src", "images/dont-make-me-go-all-caps-on-you.jpg" );
 				$("#question1").hide();
 				$("#question2").hide();
 				$("#question3").hide();
@@ -132,7 +139,6 @@ $(document).ready(function () {
 	}
 
 	function updateCharacter(name, knowlege, sanity, power) {
-		alert("updateCharacter");
 		var updatedCharacter = {
 			name: name,
 			power: power,
@@ -153,8 +159,6 @@ $(document).ready(function () {
 	}
 
 	function updatePlayerAttributesView() {
-		alert("updatePlayerAttributesView");
-
 		$.get("/api/character/" + nameParam, function (data) {
 			$("#characterName").text("").val;
 			$("#characterName").text(data[0].name);
@@ -162,6 +166,7 @@ $(document).ready(function () {
 			$("#characterKnowledge").text(data[0].knowlege);
 			$("#characterSanity").text(data[0].sanity);
 
+			//update the currentCharacter obj to be used by the rest of the app
 			currentCharacter.name = data[0].name;
 			currentCharacter.power = data[0].power;
 			currentCharacter.knowlege = data[0].knowlege;
