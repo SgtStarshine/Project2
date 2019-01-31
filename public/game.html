@@ -17,13 +17,17 @@
 </head>
 
 <body>
- <div class="container chosen-select" id="step1">
+ <div class="container chosen-select" id="question1">
     <div class="row stepRow">
-      <div class="col-6" id="well-section">
+      <div class="col-6" id="characterAttributesSection">
+          <h3>Name:<span id="characterName"></span></h3>
+          <h3>Power:<span id="characterPower"></span></h3>
+          <h3>Knowledge:<span id="characterKnowledge"></span></h3>
+          <h3>Sanity:<span id="characterSanity"></span></h3>
       </div>
       <div class="col-6"><img class="stepImage" src="images/golden-parachute.gif" alt="Golden Parachute"></div>
     </div>
-    <div class="row stepRow">
+    <div class="row stepRow"> 
       <div class="col-8">
         You have worked for a tech firm for the last five years.
         The Company recently hired two efficiency consultants to downsize the company.
@@ -41,7 +45,7 @@
     </div>
   </div>
 
-  <div class="container chosen-select" id="step2">
+  <div class="container chosen-select" id="question2" style="display: none;">
     <div class="row stepRow">
       <div class="col-6" id="well-section">
       </div>
@@ -66,7 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step3">
+  <div class="container chosen-select" id="question3" style="display: none;">
     <div class="row stepRow">
       <div class="col-6" id="well-section">
       </div>
@@ -89,7 +93,7 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step4">
+  <div class="container chosen-select" id="question4" style="display: none;">
     <div class="row stepRow">
       <div class="col-6" id="well-section">
       </div>
@@ -113,7 +117,7 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step5">
+  <div class="container chosen-select" id="question5" style="display: none;">
     <div class="row stepRow">
       <div class="col-6" id="well-section">
       </div>
@@ -134,7 +138,7 @@
       </div>
     </div>
   </div>
-  <div class="container chosen-select" id="step6">
+  <div class="container chosen-select" id="question6" style="display: none;">
     <div class="row stepRow">
       <div class="col-6" id="well-section">
       </div>
@@ -157,7 +161,7 @@
     </div>
   </div>
 
-  <div id="ending1">
+  <div id="ending1" style="display: none;">
     <h1 id="done">Reputation!</h1>
     <br>
     <p>News of your departure from the tech firm spreads quickly.
@@ -168,7 +172,7 @@
       Looks like your reputation carried you through.</p>
   </div>
 
-  <div id="ending2">
+  <div id="ending2" style="display: none;">
     <h1 id="done">Criminal!</h1>
     <br>
     <p>You find yourself in Cabo, living it up.
@@ -176,7 +180,7 @@
       You racked up enough money with it to just live of the interest for a while.</p>
   </div>
 
-  <div id="ending3">
+  <div id="ending3" style="display: none;">
     <h1 id="done">Sanity!</h1>
     <br>
     <p>You may not have gotten accolades or a significant severance,
@@ -187,7 +191,7 @@
     </p>
   </div>
 
-  <div id="ending4">
+  <div id="ending4" style="display: none;">
     <h1 id="done">
       Knowledge!</h1>
     <br>
