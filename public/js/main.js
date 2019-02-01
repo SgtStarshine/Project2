@@ -6,7 +6,6 @@ $("#add-btn").on("click", function(event) {
     
 // This function inserts a new burger into our database and then updates the view
 function insertCharacter(event) {
-  console.log("knowlege: " + $("#knowledge").val().trim());
 
   var newCharacter = {
     name: $("#name").val().trim(),
@@ -15,5 +14,5 @@ function insertCharacter(event) {
     sanity: $("#sanity").val().trim()
   };   
 
-  $.post("/api/create", newCharacter,  $(location).attr('href',"/game?name=" + newCharacter.name ));
+  $.post("/api/create", newCharacter,  function(response) {$(location).attr('href',"/game?charID=" + response.id)});
 }

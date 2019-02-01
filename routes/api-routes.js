@@ -10,11 +10,11 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {  
 
-app.get("/api/character/:name", function(req, res) {
+app.get("/api/character/:id", function(req, res) {
 
     db.Characters.findAll({
       where: {
-        name: req.params.name 
+        id: req.params.id 
       }
     })
     .then(function(dbCharacter) {
@@ -49,7 +49,7 @@ app.get("/api/character/:name", function(req, res) {
       sanity: req.body.sanity
     }, {
       where: {
-        name: req.body.name
+        id: req.body.id
       }
     }).then(function(dbCharacter) {
       res.json(dbCharacter);

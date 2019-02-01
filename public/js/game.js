@@ -1,11 +1,12 @@
 // ------------------------ Game Functions are below ------------------------
 $(document).ready(function () {
 	var url = window.location.search;
-	if (url.indexOf("?name=") !== -1) {
-		nameParam = url.split("=")[1];
+	if (url.indexOf("?charID=") !== -1) {
+		charID = url.split("=")[1];
 	}
 	var currentCharacter = {
-		name: nameParam,
+			id: charID,
+			name: "",
 			reputation: 0,
 			knowlege: 0,
 			sanity: 0
@@ -48,7 +49,7 @@ $(document).ready(function () {
 				currentCharacter.knowlege++;
 				currentCharacter.sanity--;
 				currentCharacter.power++;
-				updateCharacter(currentCharacter.name, currentCharacter.knowlege, currentCharacter.sanity, currentCharacter.power)
+				updateCharacter(currentCharacter.id, currentCharacter.knowlege, currentCharacter.sanity, currentCharacter.power)
 				$(".stepImage").attr("src", "images/nick_the_lounge_singer.jpg");
 				$("#question1").hide();
 				$("#question2").show();
@@ -105,48 +106,19 @@ $(document).ready(function () {
 				break;
 			default:
 				//this should log an error **TODO**
-				alert("Please select an answer before continuing.");
 				break;
 		}
-
-
-			// switch (Q1) {
-			// 	case "option1":
-			// 		console.log("Q1-O1 selected");
-			// 		data[0].power--;
-			// 		$("#question1").hide();
-			// 		$("#question2").show();
-			// 		break;
-			// 	case "option2":
-			// 		console.log("Q1-O2 selected");
-			// 		data[0].power++;
-			// 		data[0].knowledge++;
-			// 		$("#question1").hide();
-			// 		$("#question2").show();
-			// 		break;
-			// 	case "option3":
-			// 		console.log("Q1-O3 selected");
-			// 		data[0].power--;
-			// 		data[0].sanity++;
-			// 		$("#question1").hide();
-			// 		$("#question2").show();
-			// 		break;
-			// 	default:
-			// 		alert("Please select an answer before continuing.")
-			// }
-
 		return;
 	}
 
-	function updateCharacter(name, knowlege, sanity, power) {
+	function updateCharacter(charID, knowlege, sanity, power) {
 		var updatedCharacter = {
-			name: name,
+			id: charID,
 			power: power,
 			knowlege: knowlege,
 			sanity: sanity
 		};   
 
-		updateCharacter.name = name;
 		updateCharacter.power = power;
 		updateCharacter.knowlege = knowlege;
 		updateCharacter.sanity = sanity;
@@ -159,8 +131,7 @@ $(document).ready(function () {
 	}
 
 	function updatePlayerAttributesView() {
-		$.get("/api/character/" + nameParam, function (data) {
-			$("#characterName").text("").val;
+		$.get("/api/character/" + currentCharacter.id, function (data) {
 			$("#characterName").text(data[0].name);
 			$("#characterPower").text(data[0].power);
 			$("#characterKnowledge").text(data[0].knowlege);
@@ -173,151 +144,6 @@ $(document).ready(function () {
 			currentCharacter.sanity = data[0].sanity;
 		})
 	}
-
-	// 	switch (Q2) {
-	// 		case "option1":
-	// 			console.log("Q2-O1 selected");
-	// 			data[0].power--;
-	// 			$("#question2").hide();
-	// 			$("#question3").show();
-	// 			break;
-	// 		case "option2":
-	// 			console.log("Q2-O1 selected");
-	// 			data[0].power++;
-	// 			data[0].knowledge++;
-	// 			$("#question2").hide();
-	// 			$("#question3").show();
-	// 			break;
-	// 		case "option3":
-	// 			console.log("Q2-O1 selected");
-	// 			data[0].power--;
-	// 			data[0].sanity++;
-	// 			$("#question2").hide();
-	// 			$("#question3").show();
-	// 			break;
-	// 		default:
-	// 			alert("Please select an answer before continuing.")
-
-	// 	}
-	// 	return;
-
-	// });
-
-	// 	var Q3 = $('input:radio[name="Step3"]:checked').val();
-
-	// 	switch (Q3) {
-	// 		case "option1":
-	// 			console.log("Q3-O1 selected");
-	// 			data[0].power--;
-	// 			$("#question3").hide();
-	// 			$("#question4").show();
-	// 			break;
-	// 		case "option2":
-	// 			console.log("Q3-O1 selected");
-	// 			data[0].power++;
-	// 			data[0].knowledge++;
-	// 			$("#question3").hide();
-	// 			$("#question4").show();
-	// 			break;
-	// 		case "option3":
-	// 			console.log("Q3-O1 selected");
-	// 			data[0].power--;
-	// 			data[0].sanity++;
-	// 			$("#question3").hide();
-	// 			$("#question4").show();
-	// 			break;
-	// 		default:
-	// 			alert("Please select an answer before continuing.")
-
-	// 	}
-	// 	return;
-
-	// });
-
-	// 	var Q4 = $('input:radio[name="Step4"]:checked').val();
-
-	// 	switch (Q4) {
-	// 		case "option1":
-	// 			console.log("Q4-O1 selected");
-	// 			data[0].power--;
-	// 			$("#question4").hide();
-	// 			$("#question5").show();
-	// 			break;
-	// 		case "option2":
-	// 			console.log("Q4-O1 selected");
-	// 			data[0].power++;
-	// 			data[0].knowledge++;
-	// 			$("#question4").hide();
-	// 			$("#question5").show();
-	// 			break;
-	// 		case "option3":
-	// 			console.log("Q4-O1 selected");
-	// 			data[0].power--;
-	// 			data[0].sanity++;
-	// 			$("#question4").hide();
-	// 			$("#question5").show();
-	// 			break;
-	// 		default:
-	// 			alert("Please select an answer before continuing.")
-
-	// 	}
-	// 	return;
-
-	// });
-
-	// 	var Q5 = $('input:radio[name="Step5"]:checked').val();
-
-	// 	switch (Q5) {
-	// 		case "option1":
-	// 			data[0].power--;
-	// 			$("#question5").hide();
-	// 			$("#question6").show();
-	// 			break;
-	// 		case "option2":
-	// 			data[0].power++;
-	// 			data[0].knowledge++;
-	// 			$("#question5").hide();
-	// 			$("#question6").show();
-	// 			break;
-	// 		case "option3":
-	// 			data[0].power--;
-	// 			data[0].sanity++;
-	// 			$("#question5").hide();
-	// 			$("#question6").show();
-	// 			break;
-	// 		default:
-	// 			alert("Please select an answer before continuing.")
-
-	// 	}
-	// 	return;
-
-	// });
-
-	// 	var Q6 = $('input:radio[name="Step6"]:checked').val();
-
-	// 	switch (Q6) {
-	// 		case "option1":
-	// 			data[0].power--;
-	// 			$("#question6").hide();
-	// 			break;
-	// 		case "option2":
-	// 			data[0].power++;
-	// 			data[0].knowledge++;
-	// 			$("#question6").hide();
-	// 			break;
-	// 		case "option3":
-	// 			data[0].power--;
-	// 			data[0].sanity++;
-	// 			$("#question6").hide();
-	// 			break;
-	// 		default:
-	// 			alert("Please select an answer before continuing.")
-
-	// 	}
-	// 	endGame();
-	// 	return;
-
-	// });
 
 	// Function to be run after the timer is up
 	function endGame() {
