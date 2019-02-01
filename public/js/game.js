@@ -112,6 +112,8 @@ $(document).ready(function () {
 	}
 
 	function updateCharacter(charID, knowlege, sanity, power) {
+		alert("Update Character");
+
 		var updatedCharacter = {
 			id: charID,
 			power: power,
@@ -131,6 +133,7 @@ $(document).ready(function () {
 	}
 
 	function updatePlayerAttributesView() {
+		alert("Update View");
 		$.get("/api/character/" + currentCharacter.id, function (data) {
 			$("#characterName").text(data[0].name);
 			$("#characterPower").text(data[0].power);

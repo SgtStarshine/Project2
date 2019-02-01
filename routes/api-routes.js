@@ -58,5 +58,4 @@ app.get("/api/character/:id", function(req, res) {
         res.json(err);
       });
   });
-  
 };
